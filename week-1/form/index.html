@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayıt</title>
+</head>
+    <body>
+
+        <header>
+            <h2>Kayıt Formu</h2>
+        </header>
+    
+    <form>
+
+      <label for="name">Ad:</label><br>
+      <input type="text" id="name" name="name"><br>
+      <label for="surname">Soyad:</label><br>
+      <input type="text" id="surname" name="surname"><br>
+
+        <!-- E-posta ve Şifre input alanları -->
+      <label for="email">E-posta:</label><br>
+      <input type="email" id="email" name="email" required><br>
+      <label for="pwd">Şifre:</label><br>
+      <input type="password" id="pwd" name="pwd" minlength="8" required><br>
+    
+      <p>Cinsiyet:</p>
+      <input type="radio" id="female" name="gender" value="female" required>
+      <label for="female">Kadın</label><br>
+      <input type="radio" id="male" name="gender" value="male" required>
+      <label for="male">Erkek</label><br><br>
+
+        <!-- Favori meyve seçim alanı -->
+        <label for="fruit">Favori Meyveniz:</label><br>
+        <select id="fruit" name="fruit">
+          <option value="apple">Elma</option>
+          <option value="strawberry">Çilek</option>
+          <option value="banana">Muz</option>
+          <option value="orange">Portakal</option>
+        </select><br><br>
+    
+      <label for="message">Mesaj:</label><br>
+      <textarea id="message" name="message" rows="10" cols="50"></textarea><br>
+    
+        <!-- Gönder butonu -->
+      <input type="submit" value="Gönder">
+    
+    </form>
+    
+</body>
+</html>
