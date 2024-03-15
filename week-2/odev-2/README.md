@@ -1,0 +1,1 @@
+![ekran-goruntusu](assets/screenshot.png)
