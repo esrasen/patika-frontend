@@ -1,0 +1,8 @@
+.fleet/
+.idea/
+
+### Mac OS ###
+.DS_Store
+
+### VS Code ###
+.vscode/
