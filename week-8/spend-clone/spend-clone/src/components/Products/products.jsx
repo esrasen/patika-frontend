@@ -1,7 +1,8 @@
 import React from 'react';
 import "./product.css";
+import data from "./data";
 
-const Products = ({ handleBuy, handleSell }) => {
+const Products = ({ handleBuy, handleSell, quantities }) => {
 
     const products = [
         {
@@ -52,9 +53,9 @@ const Products = ({ handleBuy, handleSell }) => {
                         <p>
                             <strong>${product.price}</strong>
                         </p>
-                        <button onClick={() => handleSell(product.price)}>Sell</button>
-                        <input type="number" placeholder="0"/>
-                        <button onClick={() => handleBuy(product.price)}>Buy</button>
+                        <button onClick={() => handleSell(product.id, product.price)}>Sell</button>
+                        <input type="number" value={quantities[product.id] || 0} disabled/>
+                        <button onClick={() => handleBuy(product.id, product.price)}>Buy</button>
                     </div>
                 ))}
             </div>

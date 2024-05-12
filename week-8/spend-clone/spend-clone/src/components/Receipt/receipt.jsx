@@ -14,7 +14,7 @@ const Receipt = ({ products, totalMoney }) => {
                     ))}
                 </ul>
                 <hr/>
-                <p>Total : ${totalMoney}</p>
+                <p>Total : ${10000000-totalMoney}</p>
             </div>
         </div>
     );
