@@ -15,7 +15,7 @@ const Products = ({ handleBuy, handleSell, quantities }) => {
                             <strong>${product.price}</strong>
                         </p>
                         <button className="sellButton" onClick={() => handleSell(product.id, product.price)}>Sell</button>
-                        <input type="number" value={quantities[product.id] || 0} disabled/>
+                        <input className="quantity" type="number" value={quantities[product.id] || 0} disabled/>
                         <button className="buyButton" onClick={() => handleBuy(product.id, product.price)}>Buy</button>
                     </div>
                 ))}
