@@ -3,13 +3,14 @@ import './App.css'
 import Header from "./components/Header/Header.jsx";
 import Products from "./components/Products/products.jsx";
 import Receipt from "./components/Receipt/receipt.jsx";
-import ListItem from "./components/Receipt/ListItem.jsx";
+import products from "./components/Products/products.jsx";
 
 const App = () => {
     const [totalMoney, setTotalMoney] = useState(10000000);
     const [quantities, setQuantities] = useState({});
 
     const handleBuy = (productId, price) => {
+        if (totalMoney < price) return;     // Toplam para fiyattan küçükse buy işlemi yapma
         setTotalMoney(totalMoney - price);
         setQuantities(prevQuantities => ({
             ...prevQuantities,
@@ -18,7 +19,7 @@ const App = () => {
     };
 
     const handleSell = (productId, price) => {
-        if (quantities[productId] > 0) {
+        if (quantities[productId] > 0) {        // Ürün sayısı 0'dan büyükse sell işlemi yapma
             setTotalMoney(totalMoney + price);
             setQuantities(prevQuantities => ({
                 ...prevQuantities,
@@ -31,7 +32,7 @@ const App = () => {
         <div>
             <Header totalMoney={totalMoney} />
             <Products handleBuy={handleBuy} handleSell={handleSell} quantities={quantities}/>
-            <Receipt products={[]} totalMoney={totalMoney} />
+            <Receipt products={quantities} totalMoney={totalMoney}/>
         </div>
     );
 };

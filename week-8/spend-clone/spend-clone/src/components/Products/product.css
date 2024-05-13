@@ -1,5 +1,5 @@
 
-button {
+.buyButton {
     background-color: #27c695;
     color: white;
     border: 1px solid #27c695;
@@ -61,4 +61,13 @@ div {
     background-color: #f1f2f6;
 }
 
-
+.sellButton {
+    background-color: #EF0B2B;
+    border: 1px solid #DF4C64;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s;
+}
