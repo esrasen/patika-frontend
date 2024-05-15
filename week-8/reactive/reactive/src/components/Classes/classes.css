@@ -1,0 +1,16 @@
+
+.yoga, .group, .solo, .stretching {
+    position: relative;
+}
+
+.yoga:hover::after, .group:hover::after, .solo:hover::after, .stretching:hover::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 100%;
+    left: 40%;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid orange;
+}

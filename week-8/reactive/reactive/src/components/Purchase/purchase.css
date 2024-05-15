@@ -1,0 +1,9 @@
+.card:hover .shop {
+    background-color: var(--main-color);
+    color: var(--text-color);
+    border-radius: 5px;
+}
+
+.card:hover .cart {
+    color: theme('colors.yellow');
+}

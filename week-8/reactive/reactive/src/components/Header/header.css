@@ -1,0 +1,8 @@
+.transparent-header {
+    transition: background-color 0.5s ease;
+}
+
+.solid-header {
+    transition: background-color 0.5s ease;
+    background-color: #355592;
+}
